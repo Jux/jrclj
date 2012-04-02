@@ -36,6 +36,10 @@ class JRClj
     fun.invoke(*args)
   end
 
+	def _lookup var_name
+		@mappings[var_name]
+	end
+
   def _alias new, old
     @mappings[new] = @mappings[old]
   end
